@@ -1,0 +1,29 @@
+Algorithm:
+1. Initialize MusicPlayer:
+a. Set up an empty queue.
+b. Initialize pygame.mixer for audio playback.
+2. Command Input Loop:
+a. Continuously prompt the user to enter commands: add,
+youtube, play, skip, show, remove, exit.
+3. Add Song (add):
+a. User provides the file path.
+b. Check if the file exists.
+c. Add the song to the queue.
+4. Add YouTube Song (youtube):
+a. User provides a YouTube URL.
+b. Validate & clean URL.
+c. Download the audio using yt_dlp, convert it to MP3 using
+ffmpeg, and add to the queue.
+5. Play Song (play):
+a. Check if the queue is not empty.
+b. Load and play the first song in the queue.
+6. Skip Song (skip):
+a. Remove the first song from the queue (popleft).
+b. Stop the current song and play the next one.
+7. Show Queue (show):
+a. Display all songs in the queue.
+8. Remove Song (remove):
+a. User provides a part of the song name.
+b. Search and remove the song from the queue.
+9. Exit Program (exit):
+a. Stop the current song and exit the program.
